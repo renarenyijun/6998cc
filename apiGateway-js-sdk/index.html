@@ -215,8 +215,7 @@ body {
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript">
     
-    //const api_key = "x-api-key";
-    //const api_val = "tdSSNd710v8zBm2HxmfqJ9XgCOd5PU9Q6FJ1QnkK";
+   
     (function () {
     var Message;
     Message = function (arg) {
@@ -285,7 +284,10 @@ body {
         
     });
     function callLambda(msg, callback){
-        var apigClient = apigClientFactory.newClient();
+        var apigClient = apigClientFactory.newClient({
+          apiKey: 'tdSSNd710v8zBm2HxmfqJ9XgCOd5PU9Q6FJ1QnkK'
+
+          });
         var body = {
             "key": msg
             
